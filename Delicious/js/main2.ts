@@ -15,17 +15,15 @@ var tempClass = ["sandwich", "eggs", "coffee", "juices"];
 
 
 function printAllDishes(){
-	let u = 0;
-	function printDish(name, price){
+	function printDish(name, price,className){
 	// for (let i = 0; i < tempClass.length; ++i) {
 
 		for (var j = 0; j < name.length; ++j) {
 		// var tC = tempClass[i]
-		
 		let tempName = name[j];
 		let tempPrice = price[j].toFixed(2);
 		let dish = `
-			<div class="${tempClass[u]} menu-restaurant">
+			<div class=" ${className} menu-restaurant">
 				<span class="clearfix">
 				<a class="menu-title" href="#" data-meal-img="assets/img/restaurant/rib.jpg">
 				${tempName}
@@ -40,15 +38,14 @@ function printAllDishes(){
 		`
 	document.getElementById("menu-wrapper").innerHTML += dish;
 		};	
-		u++;
 	// }
 
 
 	}
-	printDish(sandwich, sandwichPrice);
-	printDish(eggs, eggsPrice);
-	printDish(coffee, coffeePrice);
-	printDish(juices, juicesPrice);
+	printDish(sandwich, sandwichPrice, tempClass[0]);
+	printDish(eggs, eggsPrice, tempClass[1]);
+	printDish(coffee, coffeePrice, tempClass[2]);
+	printDish(juices, juicesPrice, tempClass[3]);
 }
 printAllDishes();
 

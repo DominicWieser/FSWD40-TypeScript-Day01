@@ -16,6 +16,11 @@ var tempClass = ["sandwich", "eggs", "coffee", "juices"];
 
 function printAllDishes(){
 	let u = 0;
+	printDish(sandwich, sandwichPrice);
+	printDish(eggs, eggsPrice);
+	printDish(coffee, coffeePrice);
+	printDish(juices, juicesPrice);
+}
 	function printDish(name, price){
 	// for (let i = 0; i < tempClass.length; ++i) {
 
@@ -45,11 +50,8 @@ function printAllDishes(){
 
 
 	}
-	printDish(sandwich, sandwichPrice);
-	printDish(eggs, eggsPrice);
-	printDish(coffee, coffeePrice);
-	printDish(juices, juicesPrice);
-}
+	
+
 printAllDishes();
 
 
